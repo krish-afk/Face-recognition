@@ -1,4 +1,4 @@
-# Face-recognition
+# Face-recognition (Ongoing)
 
 • Fine tuned a pre-trained vggface vgg16 model for identifying persons in images and videos using data-sets created
 for personal use
