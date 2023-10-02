@@ -24,7 +24,6 @@ top = Dense(1024, activation = 'relu')(top)
 top = Dense(512, activation = 'relu')(top)
 top = Dense(5, activation = 'softmax')(top)
 
-# 5 as Krish, Manish, Sarika, Sonya and unknown
 
 model = Model(inputs = vgg_face.input, outputs = top)
 print(model.summary())
@@ -78,12 +77,12 @@ callbacks = [earlystop, check]
 
 model.compile(
     loss = 'categorical_crossentropy',
-    optimizer = RMSprop(lr = 0.001),
+    optimizer = RMSprop(lr = 0.0005),
     metrics = ['accuracy']
 )
 
-nb_train = 180
-nb_validation = 102
+nb_train = 192
+nb_validation = 111
 
 epochs = 10
 batch_size = 32
@@ -95,3 +94,5 @@ history = model.fit(
     validation_data = validation_gen,
     validation_steps = nb_validation // batch_size
 )
+
+model.save("/Users/krishaanggupta/Desktop/ML projects/face_rec.keras")

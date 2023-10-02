@@ -18,7 +18,6 @@ img_num = 0
 vid_num = 0
 output_path = "/Users/krishaanggupta/Desktop/ML projects/input/"
 
-
 def input_ext(input_path, output_path, img_num, vid_num):
     image_extensions = ['.jpg', '.jpeg']
     vid_extension = '.mp4'
@@ -60,7 +59,7 @@ def input_ext(input_path, output_path, img_num, vid_num):
             for (x,y,w,h) in faces:
                 roi_color = img[y:y+h, x:x+w]
             resized = cv2.resize(roi_color, (224,224))
-            img_path = output_path + "/image" + str(img_num) + ".jpg"
+            img_path = output_path + "image" + str(img_num) + ".jpg"
             cv2.imwrite(img_path, resized)
         except:
             print("No faces detected")
@@ -91,7 +90,4 @@ def input_ext(input_path, output_path, img_num, vid_num):
     
         vid.release()
         
-        return input_ext(data_path, out_path, img_num, vid_num, img_bool, vid_bool)
-        
-        
-print(input_ext(input_path, output_path, img_num, vid_num))     
+        return input_ext(data_path, out_path, img_num, vid_num, img_bool, vid_bool)    

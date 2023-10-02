@@ -26,10 +26,9 @@ for file in img_list:
         cv2.imwrite("/Users/krishaanggupta/Desktop/ML projects/validationext/Unknown/"+str(img_num)+".jpg", resized)
     except:
         print("No faces detected")
-        resized = cv2.resize(img, (224,224))
-        cv2.imwrite("/Users/krishaanggupta/Desktop/ML projects/trainingext/Unknown/"+str(img_num)+".jpg", resized)
+        #resized = cv2.resize(img, (224,224))
+        #cv2.imwrite("/Users/krishaanggupta/Desktop/ML projects/trainingext/Sarika/"+str(img_num)+".jpg", resized)
         
-    img_num += 1
-    
+    img_num += 1 
     
         
